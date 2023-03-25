@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box !important;
+  }
+  
+  body {
+    font-family: "Poppins", sans-serif;
+    background-color: #1d9bf0;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  .page-wrapper{
+    width: 100%;
+    min-height: 100vh;
+  }
+  .header{
+    padding-top:20px;
+    position: sticky;
+    top: 0;
+  }
+  .header-content{
+    width: 100%;
+    padding: 15px 15px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+   
+    transition: 0.2s;
+  }
+  a.head-btn{
+    background: black;
+    color: white;
+    text-decoration: none;
+    min-width: 50px;
+    min-height: 50px;
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    padding: 15px;
+    gap: 10px;
+    transition: 0.2s;
+  }
+  a.head-btn svg{
+    fill: white;
+    width: 22px;
+    transition: 0.2s;
+  }
+  .head-icon{
+    background: white;
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.2s;
+    box-shadow: 4px 4px 31px -5px rgba(0,0,0,0.35);
+    -webkit-box-shadow: 4px 4px 31px -5px rgba(0,0,0,0.35);
+    -moz-box-shadow: 4px 4px 31px -5px rgba(0,0,0,0.35);
+  }
+  .head-icon img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header-content.trasparent{
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: background-color 150ms ease 0s, -webkit-transform 150ms ease 0s, -webkit-backdrop-filter 150ms ease 0s;
+    backdrop-filter: blur(10px);
+  }
+  .header-content.trasparent .head-icon{
+    opacity: 1;
+  }
+
+  .header-content.trasparent a.head-btn{
+    background: white;
+  }
+  .header-content.trasparent a.head-btn svg{
+    color: black;
+    fill: black;
+  }  
+  .header-content.trasparent a.head-btn span{
+    display: none;
+  }
+  .hero-section{
+    width: 100%;
+    padding: 40px 0;
+  }
+  .top-icon{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+  }
+  .top-icon img{
+    border-radius: 50%;
+    background: white;
+    width: 96px;
+    height: 96px;
+    display: block;
+    object-fit: contain;
+    object-position: initial;
+    filter: none;
+    overflow: hidden;
+    margin: 0 auto;
+    box-shadow: 4px 4px 31px -5px rgba(0,0,0,0.35);
+-webkit-box-shadow: 4px 4px 31px -5px rgba(0,0,0,0.35);
+-moz-box-shadow: 4px 4px 31px -5px rgba(0,0,0,0.35);
+  }
+  .hero-section h3{
+    background: white;
+    width: fit-content;
+    margin: 20px auto 0 auto;
+    padding: 5px 20px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .hero-section p{
+    color: white;
+    text-align: center;
+    margin: 10px 0 0 0;
+    font-weight: 600;
+  }
+  .hero-section iframe{
+    max-width: 676px;
+    width: 100%;
+    max-height: 380px;
+    border-radius: 20px;
+    margin: 40px auto 0 auto;
+    text-align: center;
+    display: block;
+    border: 2px solid white;
+  }
+  .bar-holder{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+  }
+
+a.link-bar{
+    width: 100%;
+    max-width: 767px;
+    margin: 0 auto;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: white;
+    border-radius: 50px;
+    transition: 0.2s;
+    border: 1px solid transparent;
+    text-decoration: none;
+}
+.link-bar p{
+    color: black;
+    margin: 0;
+    transition: 0.2s;
+}
+.link-bar span{
+    width: 50px;
+    border-radius: 50%;
+    display: block;
+    overflow: hidden;
+    height: 50px;
+    background: #1e1e1e;
+    position: absolute;
+    left: 10px;
+}
+.link-bar span img{
+    width: 100%;
+    height: 50px;
+    width: 50px;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+}
+.link-bar:hover{
+    background: transparent;
+    border-color: white;
+}
+.link-bar:hover p{
+    color: white;
+}
+
+
+@media only screen and (max-width: 580px) {
+    .hero-section iframe {
+        max-height: 240px;
+    }
+    .link-bar span{
+        position: inherit;
+        left: 0;
+    }
+    a.link-bar{
+        justify-content: inherit;
+        gap: 20px;
+        padding: 5px 10px;
+    }
+    .hero-section h3 {
+        font-size: 16px;
+    }
+    .hero-section p {
+        font-weight: 600;
+        font-size: 14px;
+    }
+    .link-bar p{
+        text-align: left;
+    }
+    
+    
+  }
